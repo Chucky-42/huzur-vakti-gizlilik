@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Huzur Vakti — Gizlilik Politikası</title>
+<title>Huzur Vakti — Gizlilik Politikası / Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -17,9 +17,16 @@
   .box { border-left: 3px solid #0E7C66; padding: .1rem 0 .1rem 1rem; margin: 1.5rem 0; }
   code { background: rgba(128,128,128,.15); padding: .1rem .3rem; border-radius: 4px; }
   footer { margin-top: 3rem; font-size: .85rem; color: #666; }
+  nav { font-size: .9rem; margin: 0 0 2rem; }
+  nav a { margin-right: .75rem; }
+  hr { margin: 3.5rem 0 2.5rem; border: 0; border-top: 1px solid rgba(128,128,128,.35); }
 </style>
 </head>
 <body>
+
+<nav><a href="#tr">Türkçe</a> · <a href="#en">English</a></nav>
+
+<section id="tr" lang="tr">
 
 <h1>Huzur Vakti — Gizlilik Politikası</h1>
 <p class="updated">Son güncelleme: 23 Ağustos 2026</p>
@@ -184,7 +191,186 @@
   Sorularınız için: <a href="mailto:lutfulku@hotmail.com">lutfulku@hotmail.com</a>
 </p>
 
-<footer>Huzur Vakti · Namaz vakitleri, kıble, hicri takvim ve Kur'an-ı Kerim</footer>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+
+<h1>Huzur Vakti — Privacy Policy</h1>
+<p class="updated">Last updated: 23 August 2026 · This is a translation of the
+Turkish text above, which is the original.</p>
+
+<div class="box">
+  <strong>In short:</strong> Huzur Vakti collects, stores and transmits no
+  personal data. You do not need an account. It contains no advertising and no
+  analytics. For prayer times and the qibla your location is used inside your
+  phone only and is never sent anywhere. The one exception is the
+  <strong>&quot;Mosques&quot; screen</strong>: to ask which mosques are nearby,
+  your approximate location is sent to an OpenStreetMap server. If you never
+  open that screen, that never happens.
+</div>
+
+<h2>Data collected</h2>
+<p>
+  None. We run no server for this app; there is no record kept about you. No
+  email address, phone number, device identifier or advertising identifier is
+  collected.
+</p>
+<p>
+  Settings contain an optional <strong>name</strong> field, only so that the
+  greeting on the home screen can use it. If you fill it in, it stays on your
+  phone, is added to no request and is sent nowhere. You may leave it empty.
+</p>
+
+<h2>Location permission</h2>
+<p>
+  The app optionally asks for the <strong>approximate location</strong>
+  permission (<code>ACCESS_COARSE_LOCATION</code>). Precise/GPS location is
+  never requested; a few hundred metres of accuracy is enough for prayer times
+  and the qibla. The permission is used for three things:
+</p>
+<ul>
+  <li>Calculating prayer times for where you are &mdash; entirely on your device</li>
+  <li>Calculating the direction of the qibla &mdash; entirely on your device</li>
+  <li><strong>Finding nearby mosques &mdash; this one sends your location out</strong></li>
+</ul>
+<p>
+  For the first two, your location is <strong>sent to no server</strong>, is not
+  stored and is not shared with third parties.
+</p>
+<p>
+  The third is different, and we would rather say so plainly. When you press
+  &quot;Find nearby mosques&quot; on the &quot;Mosques&quot; tab, your
+  approximate coordinates go to OpenStreetMap's Overpass server as a query, and
+  while map tiles are fetched the area you are in is seen by
+  <code>tile.openstreetmap.org</code>. The addresses used are
+  <code>overpass-api.de</code>, <code>overpass.kumi.systems</code> and
+  <code>tile.openstreetmap.org</code>. These requests carry no name, no identity
+  and no device identifier; what leaves is a coordinate and a search radius.
+  Your location is not stored by the app.
+</p>
+<p>
+  This is why the permission is requested not at launch but
+  <strong>only when you press that button on that screen</strong>. If you never
+  open the Mosques screen, your location never leaves the phone. If you decline
+  the permission, that screen does not work and the rest of the app carries on
+  as before; you pick your city by hand from a list of 90 countries and 592
+  cities.
+</p>
+
+<h2>How prayer times are calculated</h2>
+<p>
+  Times are found on your device by astronomical calculation, using the method
+  of the religious authority of your own country (Diyanet for Türkiye, JAKIM for
+  Malaysia, Karachi for Pakistan, and so on). No internet connection is needed
+  for this; the app works fully offline.
+</p>
+<p>
+  <strong>Downloading an official timetable:</strong> a calculation is a
+  reproduction of the timetable an authority publishes, and the authority's own
+  printed timetable is more exact. So if the authority the app
+  <em>already follows</em> publishes a timetable for your city, the app
+  downloads it a few times a year and keeps it on your device. Today this
+  applies to two authorities: <strong>Diyanet</strong> (Türkiye, and anyone who
+  picks the Diyanet method in settings) and <strong>JAKIM</strong> (Malaysia).
+  Each user's request only ever goes to <em>their own</em> authority:
+  <strong>not a single request</strong> goes to Diyanet for a Malaysian user, or
+  to JAKIM for a user in Türkiye. If you use any other authority's method, no
+  request is made at all and the times are calculated on your device.
+</p>
+<p>
+  In that download, <strong>the name of the city you chose</strong> and the time
+  of the download do reach that authority's server, and we want you to know it.
+  The addresses used are <code>namazvakitleri.diyanet.gov.tr</code> and
+  <code>vakithesaplama.diyanet.gov.tr</code> (Diyanet), and
+  <code>www.e-solat.gov.my</code> (JAKIM). Your name, your identity, your device
+  identifier and your location are not sent. The downloaded timetable is kept on
+  your device only and is used when there is no internet. You can delete it from
+  settings; if you do, the app goes back to its own calculation.
+</p>
+
+<h2>Use of the internet</h2>
+<p>
+  The app connects to the internet in three cases. First, the official timetable
+  download described above. Second, asking for nearby mosques and fetching map
+  tiles on the &quot;Mosques&quot; screen &mdash; described above under Location
+  permission. Third, Qur'an audio, <em>when you choose to download it</em>: the
+  audio file of the sura you picked is downloaded from <code>mp3quran.net</code>.
+  No information identifying you is sent with that request. Downloaded files are
+  kept on your device only and can be deleted from inside the app.
+</p>
+
+<h2>What is kept on your device</h2>
+<ul>
+  <li>The city you chose and your notification preferences</li>
+  <li>The Qur'an audio files you downloaded</li>
+  <li>If downloaded, the authority's published timetable and (for Diyanet) the
+      list of religious days</li>
+</ul>
+<p>
+  All of it lives in your device's own storage. Uninstalling the app removes it
+  from your device.
+</p>
+<p>
+  <strong>About backup:</strong> if Android's own backup feature is on, your
+  preferences (chosen city, notification settings, your missed-prayer and dhikr
+  records) are backed up to your Google account and come back when you install
+  the app on a new phone. This is deliberate: a missed-prayer ledger can be a
+  record kept for years, and losing it when someone changes phones is the worst
+  thing this app could do. That backup sits in <em>your Google account</em>, not
+  with us — we have no server and no access to it. Downloaded Qur'an audio is
+  not included in the backup. If you do not want the backup, you can turn it off
+  in Android's settings.
+</p>
+
+<h2>Notifications</h2>
+<p>
+  Adhan notifications are set entirely on the device, using the phone's own alarm
+  system. No server and no push service is used to deliver them.
+</p>
+
+<h2>Advertising and analytics</h2>
+<p>None. The app contains no ad network, no analytics and no crash reporting.</p>
+
+<h2>Children</h2>
+<p>
+  Because the app collects no data from anyone, it collects none from children
+  either.
+</p>
+
+<h2>Content sources and licences</h2>
+<ul>
+  <li>
+    Arabic text of the Qur'an: <a href="https://tanzil.net">the Tanzil Project</a>,
+    used unmodified.
+  </li>
+  <li>Turkish translation: Elmalılı Hamdi Yazır (public domain).</li>
+  <li>English translation: Marmaduke Pickthall (public domain).</li>
+  <li>Indonesian translation: Kementerian Agama RI.</li>
+  <li>Malay translation: Abdullah Muhammad Basmeih.</li>
+  <li>
+    Adhan recording: Wikimedia Commons,
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
+    (public domain). CC0 requires no attribution; even so, where the recording
+    came from is written here.
+  </li>
+</ul>
+
+<h2>Changes</h2>
+<p>
+  If this policy changes, this page is updated and the date above is changed.
+</p>
+
+<h2>Contact</h2>
+<p>
+  For questions: <a href="mailto:lutfulku@hotmail.com">lutfulku@hotmail.com</a>
+</p>
+
+</section>
+
+<footer>Huzur Vakti · Namaz vakitleri, kıble, hicri takvim ve Kur'an-ı Kerim ·
+Prayer times, qibla, the Hijri calendar and the Qur'an</footer>
 
 </body>
 </html>

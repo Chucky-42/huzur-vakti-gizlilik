@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huzur Vakti — Gizlilik Politikası</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+    line-height: 1.65;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .updated { color: #666; font-size: .9rem; margin-top: 0; }
+  .box { border-left: 3px solid #0E7C66; padding: .1rem 0 .1rem 1rem; margin: 1.5rem 0; }
+  code { background: rgba(128,128,128,.15); padding: .1rem .3rem; border-radius: 4px; }
+  footer { margin-top: 3rem; font-size: .85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<h1>Huzur Vakti — Gizlilik Politikası</h1>
+<p class="updated">Son güncelleme: 23 Ağustos 2026</p>
+
+<div class="box">
+  <strong>Kısaca:</strong> Huzur Vakti hiçbir kişisel veri toplamaz, saklamaz veya
+  aktarmaz. Hesap açmanız gerekmez. Reklam ve analiz aracı içermez. Namaz vakti ve
+  kıble için konumunuz yalnızca telefonunuzun içinde kullanılır, hiçbir yere
+  gönderilmez. Tek istisna <strong>&quot;Camiler&quot; ekranıdır</strong>: yakındaki
+  camileri sorabilmek için yaklaşık konumunuz OpenStreetMap sunucusuna gönderilir.
+  O ekranı hiç açmazsanız bu da hiç olmaz.
+</div>
+
+<h2>Toplanan veriler</h2>
+<p>
+  Hiçbiri. Uygulama sunucumuz yoktur; sizin adınıza tutulan bir kayıt yoktur.
+  E-posta, telefon numarası, cihaz kimliği veya reklam kimliği toplanmaz.
+</p>
+<p>
+  Ayarlarda isteğe bağlı bir <strong>ad</strong> alanı vardır; yalnızca ana
+  sayfadaki selamlamada görünsün diye. Girerseniz telefonunuzda saklanır, hiçbir
+  isteğe eklenmez ve hiçbir yere gönderilmez. Boş bırakabilirsiniz.
+</p>
+
+<h2>Konum izni</h2>
+<p>
+  Uygulama, isteğe bağlı olarak <strong>yaklaşık konum</strong> izni ister
+  (<code>ACCESS_COARSE_LOCATION</code>). Hassas/GPS konum izni istenmez; namaz
+  vakti ve kıble için birkaç yüz metrelik doğruluk yeterlidir. İzin üç şey için
+  kullanılır:
+</p>
+<ul>
+  <li>Bulunduğunuz yere göre namaz vakitlerini hesaplamak &mdash; tamamen cihazınızda</li>
+  <li>Kıble yönünü hesaplamak &mdash; tamamen cihazınızda</li>
+  <li><strong>Yakındaki camileri bulmak &mdash; bu, konumunuzu dışarı gönderir</strong></li>
+</ul>
+<p>
+  İlk ikisinde konum bilgisi <strong>hiçbir sunucuya gönderilmez</strong>,
+  kaydedilmez ve üçüncü taraflarla paylaşılmaz.
+</p>
+<p>
+  Üçüncüsü farklıdır ve bunu açıkça yazmak isteriz. &quot;Camiler&quot; sekmesinde
+  &quot;Yakındaki camileri bul&quot; düğmesine bastığınızda, yaklaşık koordinatınız
+  OpenStreetMap&#39;in Overpass sunucusuna bir sorgu olarak gider; harita
+  karolarını çekerken de bulunduğunuz bölge <code>tile.openstreetmap.org</code>
+  tarafından görülür. Kullanılan adresler: <code>overpass-api.de</code>,
+  <code>overpass.kumi.systems</code> ve <code>tile.openstreetmap.org</code>.
+  Bu isteklerde adınız, kimliğiniz veya cihaz kimliğiniz gönderilmez; giden şey
+  koordinat ve arama yarıçapıdır. Konumunuz uygulama tarafından kaydedilmez.
+</p>
+<p>
+  Bu yüzden izin uygulama açılışında değil, <strong>yalnızca o ekranda o düğmeye
+  bastığınızda</strong> istenir. Camiler ekranını hiç açmazsanız konumunuz hiçbir
+  zaman dışarı çıkmaz. İzni vermezseniz o ekran çalışmaz, uygulamanın geri kalanı
+  eskisi gibi çalışır; şehrinizi 90 ülke ve 592 şehir içeren listeden elle
+  seçersiniz.
+</p>
+
+<h2>Namaz vakitleri nasıl hesaplanır?</h2>
+<p>
+  Vakitler cihazınızda, astronomik hesapla bulunur — ülkenize göre o ülkenin kendi
+  dinî merciinin yöntemiyle (Türkiye için Diyanet, Malezya için JAKIM, Pakistan
+  için Karaçi ve benzeri). Bunun için internet bağlantısı gerekmez; uygulama
+  çevrimdışıyken de tam olarak çalışır.
+  </p>
+  <p>
+  <strong>Resmî takvim indirme:</strong> Hesaplama, bir merciin yayımladığı
+  takvimin yeniden üretimidir; merciin kendi bastığı takvim daha kesindir. Bu
+  yüzden, uygulamanın <em>zaten takip ettiği</em> merci o şehir için bir takvim
+  yayımlıyorsa, uygulama bunu yılda birkaç kez indirir ve cihazınızda saklar.
+  Bugün iki merci için geçerlidir: <strong>Diyanet</strong> (Türkiye ve
+  ayarlardan Diyanet yöntemini seçenler) ve <strong>JAKIM</strong> (Malezya).
+  Her kullanıcıya yalnızca <em>kendi</em> merciine istek yapılır: Malezyalı bir
+  kullanıcı için Diyanet'e, Türkiyeli bir kullanıcı için JAKIM'a
+  <strong>tek bir istek bile çıkmaz</strong>. Bunların dışında bir merciin
+  yöntemini kullanıyorsanız hiç istek yapılmaz, vakitler cihazınızda hesaplanır.
+  </p>
+  <p>
+  Bu indirmede <strong>seçtiğiniz şehrin adı</strong> ve indirme zamanı ilgili
+  merciin sunucusuna gitmiş olur; bunu bilmenizi isteriz. Kullanılan adresler:
+  <code>namazvakitleri.diyanet.gov.tr</code> ve
+  <code>vakithesaplama.diyanet.gov.tr</code> (Diyanet),
+  <code>www.e-solat.gov.my</code> (JAKIM). Adınız, kimliğiniz, cihaz
+  kimliğiniz veya konumunuz gönderilmez. İndirilen takvim yalnızca cihazınızda
+  saklanır ve internet olmadığında da kullanılır. Ayarlardan silebilirsiniz;
+  sildiğinizde uygulama kendi hesabına döner.
+</p>
+
+<h2>İnternet kullanımı</h2>
+<p>
+  Uygulama üç durumda internete bağlanır. Birincisi, yukarıda anlatılan resmî
+  takvim indirmesi. İkincisi, &quot;Camiler&quot; ekranında yakındaki camileri
+  sorma ve harita karolarını çekme &mdash; ayrıntısı yukarıda, Konum izni
+  başlığında. Üçüncüsü, Kur'an-ı Kerim ses kaydını
+  <em>siz indirmeyi seçtiğinizde</em>. Bu durumda seçtiğiniz surenin ses dosyası
+  <code>mp3quran.net</code> üzerinden indirilir. Bu istek sırasında kimliğinizi
+  belirten hiçbir bilgi gönderilmez. İndirilen dosyalar yalnızca cihazınızda saklanır
+  ve uygulama içinden silebilirsiniz.
+</p>
+
+<h2>Cihazınızda saklananlar</h2>
+<ul>
+  <li>Seçtiğiniz şehir ve bildirim tercihleriniz</li>
+  <li>İndirdiğiniz Kur'an ses dosyaları</li>
+  <li>İndirilmişse, merciin yayımladığı vakit takvimi ve (Diyanet için) dinî
+      günler listesi</li>
+</ul>
+<p>
+  Bunların tamamı cihazınızın kendi depolamasındadır. Uygulamayı kaldırdığınızda
+  cihazınızdan silinir.
+</p>
+<p>
+  <strong>Yedekleme hakkında:</strong> Android'in kendi yedekleme özelliği açıksa,
+  tercihleriniz (seçtiğiniz şehir, bildirim ayarları, kaza ve tesbihat kayıtlarınız)
+  Google hesabınıza yedeklenir ve yeni bir telefona kurduğunuzda geri gelir. Bu
+  bilinçli bir tercihtir: kaza kaydı yıllarca tutulmuş bir defter olabilir ve onu
+  telefon değiştirirken kaybettirmek bu uygulamanın yapabileceği en kötü şeydir.
+  Bu yedek <em>Google hesabınızda</em> durur, bizde değil — bizim sunucumuz yoktur
+  ve bu veriye erişimimiz yoktur. İndirdiğiniz Kur'an ses kayıtları yedeğe dâhil
+  edilmez. Yedeklemeyi istemiyorsanız Android ayarlarından kapatabilirsiniz.
+</p>
+
+<h2>Bildirimler</h2>
+<p>
+  Ezan bildirimleri tamamen cihaz içinde, telefonun alarm sistemiyle kurulur.
+  Bildirim göndermek için hiçbir sunucu veya push servisi kullanılmaz.
+</p>
+
+<h2>Reklam ve analiz</h2>
+<p>Yoktur. Uygulamada reklam ağı, analiz veya çökme raporlama aracı bulunmaz.</p>
+
+<h2>Çocuklar</h2>
+<p>
+  Uygulama hiç kimseden veri toplamadığı için çocuklardan da veri toplamaz.
+</p>
+
+<h2>İçerik kaynakları ve lisanslar</h2>
+<ul>
+  <li>
+    Kur'an-ı Kerim Arapça metni: <a href="https://tanzil.net">Tanzil Projesi</a>,
+    değiştirilmeden kullanılmıştır.
+  </li>
+  <li>Türkçe meal: Elmalılı Hamdi Yazır (kamu malı).</li>
+  <li>İngilizce meal: Marmaduke Pickthall (kamu malı).</li>
+  <li>Endonezce meal: Kementerian Agama RI.</li>
+  <li>Malayca meal: Abdullah Muhammad Basmeih.</li>
+  <li>
+    Ezan kaydı: Wikimedia Commons,
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
+    (kamu malı). CC0 atıf zorunluluğu getirmez; yine de kaydın nereden geldiği
+    burada yazılıdır.
+  </li>
+</ul>
+
+<h2>Değişiklikler</h2>
+<p>
+  Bu politika değişirse bu sayfa güncellenir ve yukarıdaki tarih değiştirilir.
+</p>
+
+<h2>İletişim</h2>
+<p>
+  Sorularınız için: <a href="mailto:lutfulku@hotmail.com">lutfulku@hotmail.com</a>
+</p>
+
+<footer>Huzur Vakti · Namaz vakitleri, kıble, hicri takvim ve Kur'an-ı Kerim</footer>
+
+</body>
+</html>

@@ -29,14 +29,14 @@
 <section id="tr" lang="tr">
 
 <h1>Huzur Vakti — Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 15 Ekim 2026</p>
+<p class="updated">Son güncelleme: 22 Ekim 2026</p>
 
 <div class="box">
   <strong>Kısaca:</strong> Huzur Vakti hiçbir kişisel veri toplamaz, saklamaz veya
   aktarmaz. Hesap açmanız gerekmez. Reklam ve analiz aracı içermez. Namaz vakti ve
   kıble için konumunuz yalnızca telefonunuzun içinde kullanılır, hiçbir yere
   gönderilmez. Tek istisna <strong>&quot;Camiler&quot; ekranıdır</strong>: yakındaki
-  camileri sorabilmek için yaklaşık konumunuz OpenStreetMap sunucusuna gönderilir.
+  camileri bulabilmek için yaklaşık konumunuz OpenStreetMap verisinden cami listesi almak üzere gönderilir.
   O ekranı hiç açmazsanız bu da hiç olmaz.
 </div>
 
@@ -73,14 +73,18 @@
 </p>
 <p>
   Üçüncüsü farklıdır ve bunu açıkça yazmak isteriz. &quot;Camiler&quot; sekmesinde
-  &quot;Yakındaki camileri bul&quot; düğmesine bastığınızda, yaklaşık koordinatınız
-  OpenStreetMap&#39;in Overpass sunucusuna bir sorgu olarak gider; harita
-  karolarını çekerken de bulunduğunuz bölge <code>tile.openstreetmap.org</code>
-  tarafından görülür. Kullanılan adresler: <code>overpass-api.de</code>,
-  <code>gall.openstreetmap.de</code>, <code>lz4.overpass-api.de</code> ve
-  <code>tile.openstreetmap.org</code>.
-  Bu isteklerde adınız, kimliğiniz veya cihaz kimliğiniz gönderilmez; giden şey
-  koordinat ve arama yarıçapıdır. Konumunuz uygulama tarafından kaydedilmez.
+  &quot;Yakındaki camileri bul&quot; düğmesine bastığınızda uygulama, OpenStreetMap
+  verisinden hazırladığımız cami dosyalarından bulunduğunuz bölgeye ait olanı
+  indirir: giden tek bilgi, yaklaşık 28 km&#39;lik bir karenin numarasıdır, koordinat
+  gönderilmez. Bu dosyalar <code>chucky-42.github.io</code> (GitHub Pages) ya da
+  yedeği <code>cdn.jsdelivr.net</code> üzerinden gelir. İkisine de
+  ulaşılamazsa yaklaşık koordinatınız (yaklaşık 1 km&#39;ye yuvarlanmış)
+  OpenStreetMap&#39;in Overpass sunucusuna bir sorgu olarak gider
+  (<code>overpass-api.de</code>, <code>gall.openstreetmap.de</code>,
+  <code>lz4.overpass-api.de</code>). Harita karolarını çekerken bulunduğunuz bölge
+  <code>tile.openstreetmap.org</code> tarafından görülür.
+  Bu isteklerde adınız, kimliğiniz veya cihaz kimliğiniz gönderilmez.
+  Konumunuz uygulama tarafından kaydedilmez.
 </p>
 <p>
   Bu yüzden izin uygulama açılışında değil, <strong>yalnızca o ekranda o düğmeye
@@ -237,7 +241,7 @@
 <section id="en" lang="en">
 
 <h1>Huzur Vakti — Privacy Policy</h1>
-<p class="updated">Last updated: 15 October 2026 · This is a translation of the
+<p class="updated">Last updated: 22 October 2026 · This is a translation of the
 Turkish text above, which is the original.</p>
 
 <div class="box">
@@ -246,7 +250,7 @@ Turkish text above, which is the original.</p>
   analytics. For prayer times and the qibla your location is used inside your
   phone only and is never sent anywhere. The one exception is the
   <strong>&quot;Mosques&quot; screen</strong>: to ask which mosques are nearby,
-  your approximate location is sent to an OpenStreetMap server. If you never
+  your approximate location is sent to fetch OpenStreetMap mosque data. If you never
   open that screen, that never happens.
 </div>
 
@@ -285,13 +289,16 @@ Turkish text above, which is the original.</p>
 <p>
   The third is different, and we would rather say so plainly. When you press
   &quot;Find nearby mosques&quot; on the &quot;Mosques&quot; tab, your
-  approximate coordinates go to OpenStreetMap's Overpass server as a query, and
-  while map tiles are fetched the area you are in is seen by
-  <code>tile.openstreetmap.org</code>. The addresses used are
-  <code>overpass-api.de</code>, <code>gall.openstreetmap.de</code>,
-  <code>lz4.overpass-api.de</code> and <code>tile.openstreetmap.org</code>. These requests carry no name, no identity
-  and no device identifier; what leaves is a coordinate and a search radius.
-  Your location is not stored by the app.
+  app downloads the file for your area from mosque files we build from
+  OpenStreetMap data: all that leaves is the number of a square about 28 km
+  across, not a coordinate. The files come from <code>chucky-42.github.io</code>
+  (GitHub Pages) or its mirror <code>cdn.jsdelivr.net</code>. Only if neither can
+  be reached do your approximate coordinates (rounded to about 1 km) go to
+  OpenStreetMap's Overpass server as a query (<code>overpass-api.de</code>,
+  <code>gall.openstreetmap.de</code>, <code>lz4.overpass-api.de</code>). While map
+  tiles are fetched, the area you are in is seen by
+  <code>tile.openstreetmap.org</code>. These requests carry no name, no identity
+  and no device identifier. Your location is not stored by the app.
 </p>
 <p>
   This is why the permission is requested not at launch but
